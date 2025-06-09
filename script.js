@@ -1,9 +1,11 @@
-document.getElementByID('getWeather').addEventListener('click',getWeather);
+
+
+document.getElementById('getWeather').addEventListener('click',getWeather);
 
 function getWeather() {
-    const city = document.getElementById('city').ariaValueMax;
+    const city = document.getElementById('city').value;
 
-    const apiKey = '____';
+    const apiKey = '3fbf1bafd040170e96fbfa20a5e26d7e';
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -17,7 +19,7 @@ function getWeather() {
         const result = `
         <h2>${data.name},${data.sys.country}</h2>
         <p>Temperature: ${data.main.temp}°C</p>
-        <p>Weather: ${data.weathee[0].main}</p>
+        <p>Weather: ${data.weather[0].main}</p>
         <p>Humidity: ${data.main.humidity}%</p>`;
 
         document.getElementById('weatherResult').innerHTML = result;

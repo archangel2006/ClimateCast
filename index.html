@@ -8,11 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Weather App</h1>
+        <h1>Climate Cast</h1>
         <div id="weatherResult"></div>
         <input type="text" id="city" placeholder="Enter The City">
         <button id="getWeather">Get Weather</button>
     </div>
+    <div id="your-element-selector"></div>  <!-- This is needed -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@latest/dist/vanta.clouds.min.js"></script>
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.clouds.min.js"></script>
+    <script>
+        VANTA.CLOUDS({
+            el: "#your-element-selector",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00
+        });
+    </script>
     <script src="script.js"></script>
+    
 </body>
 </html>
